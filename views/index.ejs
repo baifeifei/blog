@@ -1,0 +1,23 @@
+<% include header%>
+</div>
+
+<div class="content">
+    <img style="float: left; vertical-align: middle; margin: 0 10px 0 0;" src="../images/home.png" alt="home" />
+    <h1 style="margin: 15px 0 0 0;">文章推荐</h1>
+    <div class="topnews">
+<% for (var book of books) {%>
+<div class="blogs">
+  <ul>
+    <h3><a href="/"><%= book.title %></a></h3>
+    <div class="markdown-body">
+      <P><%- book.note %></p>
+    </div>
+    <p class="autor"><span class="lm f_l">作者:<%=book.username%></span><span class="dtime f_l">时间:<%=book.createdAt%></span><span class="viewnum f_r">浏览（<a href="/">459</a>）</span><span
+        class="pingl f_r">评论（<a href="/">30</a>）</span></p>
+  </ul>
+</div>
+<% } %>
+</div>
+</div>
+
+<% include footer %>

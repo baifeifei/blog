@@ -1,0 +1,30 @@
+<% include header %>
+</div>
+<link rel="stylesheet" href="http://ojjjzusdf.bkt.clouddn.com/mditor.min.css" />
+<script src="http://ojjjzusdf.bkt.clouddn.com/mditor.min.js"></script>-
+
+<div class="content">
+    <img style="float: left; vertical-align: middle; margin: 0 10px 0 0;" src="../images/home.png" alt="home" />
+    <h1 style="margin: 15px 0 0 0;">文章发布</h1>
+    <div class="topnews">
+        <form class="ui form"  id="article" action="/create" method="POST">
+            <div class="field required">
+            <label style="font-size:16px">标题:</label>
+            <input placeholder="标题字数不少于5字" type="text" name="title">
+        </div>
+        <textarea name="content" id="editor" placeholder="正文不能为空">
+        </textarea>
+        <input type="submit"  value="发布" id="submitBtn">
+        </form>
+        <script>
+        $(document).ready(function () {
+            new Mditor("#editor", {
+                height: 300,
+                fixedHeight: true
+            });
+        });
+        </script>
+    </div>
+</div>
+
+<% include footer %>

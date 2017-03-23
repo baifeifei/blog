@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <link rel="logo icon" href="../images/logo.ico" />
+    <link type="text/css" rel="stylesheet" href="../css/login.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101386401" data-redirecturi="http://free-blog.top/index" charset="utf-8" data-callback="true"></script>
+</head>
+<body class="login_bj" >
+<div class="zhuce_body">
+    <div class="zhuce_kong login_kuang">
+    	<div class="zc">
+        	<div class="bj_bai">
+            <h3>登录</h3>
+            <%if(typeof(msg) !=='undefined'){%>
+                <p style="color:red"><%=msg %></p>
+            <%}%>
+       	  	  <form action="/signin" method="POST">
+                <input name="email" type="text" class="kuang_txt email" placeholder="Email">
+                <input name="password" type="password" class="kuang_txt password" placeholder="password">
+                <br/><br/>
+                <input name="登录" type="submit" class="btn_zhuce" value="登录">
+                </form>
+            </div>
+        	<div class="bj_right">
+            	<p>使用以下账号直接登录</p>
+                <a href="https://graph.qq.com/oauth2.0/authorize?client_id=101386401&response_type=token&scope=all&redirect_uri=http%3A%2F%2Ffree-blog.top%2Findex"  class="zhuce_qq">QQ登录</a>
+                <a href="#" class="zhuce_wb">微博登录</a>
+                <a href="#" class="zhuce_wx">微信登录</a>
+                <p>没有账号？<a href="/signup">立即注册</a></p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript">
+    // function toLogin()
+    // {
+    // //以下为按钮点击事件的逻辑。注意这里要重新打开窗口
+    // //否则后面跳转到QQ登录，授权页面时会直接缩小当前浏览器的窗口，而不是打开新窗口
+    // var A=window.open("https://graph.qq.com/oauth2.0/authorize?client_id=101386401&response_type=token&scope=all&redirect_uri=http%3A%2F%2Fwww.free-blog.top","TencentLogin", "width=450,height=320,menubar=0,scrollbars=1,resizable=1,status=1,titlebar=0,toolbar=0,location=1");
+    
+    // } 
+</script>
+    
+</body>
+</html>

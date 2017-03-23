@@ -1,0 +1,44 @@
+<% include header %>
+</div>
+<div class="content">
+    <img style="float: left; vertical-align: middle; margin: 0 10px 0 0;" src="../images/home.png" alt="home" />
+    <h1 style="margin: 15px 0 0 0;">WebSocket多人聊天室</h1>
+    <div class="topnews">
+        <script src="http://www.free-blog.top/socket.io/socket.io.js"></script>
+        <div id="chatbox">
+            <div style="background:#3d3d3d;height: 28px; width: 100%;font-size:12px;">
+                <div style="line-height: 28px;color:#fff;">
+                    <span style="text-align:left;margin-left:10px;">多人聊天室</span>
+                    <span style="float:right; margin-right:10px;"><span id="showusername"></span>
+					<!--<span id="span" > |</span>--> 
+					<!--<a id="link"  href="javascript:;" onclick="CHAT.logout()" style="color:#fff;">退出</a></span>-->
+                </div>
+            </div>
+            <div id="doc">
+                <div id="chat">
+                    <div id="message" class="message">
+                            <div id="onlinecount" style="background:#EFEFF4; font-size:12px; margin-top:10px; margin-left:10px; color:#666;">
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <div class="input">
+                        <input type="text" maxlength="140" placeholder="请输入聊天内容，按Enter提交" id="content" name="content">
+                        </div>
+                        <div class="action">
+                            <button type="button" id="mjr_send" onclick="CHAT.submit();">提交</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../js/client.js"></script>
+       <script>
+            var user=<%-session%>;
+            $(function(){
+                CHAT.init(user.username);
+            })
+       </script>
+</div>
+</div>
+
+<% include footer %>

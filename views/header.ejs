@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>首页</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="../css/homeStyle.css" />
+  <link href="../css/base.css" rel="stylesheet">
+  <link href="../css/index.css" rel="stylesheet">
+  <script src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" 
+    data-callback="true" charset="utf-8"  type="text/javascript"></script>
+  <script src="https://cdn.staticfile.org/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/jquery.easing-sooper.js"></script>
+  <script type="text/javascript" src="../js/jquery.sooperfish.js"></script>
+  <script type="text/javascript" src="../js/modernizr-1.5.min.js"></script>
+  <script src="https://cdn.staticfile.org/semantic-ui/2.2.2/semantic.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/chat.css" />
+  <link rel="logo icon" href="../images/logo.ico" />
+
+</head>
+
+<body>
+  <div id="main">
+    <header>
+      <div id="logo">
+        <div id="logo_text">
+          <h1>欢迎进入故事的博客</h1>
+          <h2>一座城市,一个故事.</h2>
+        </div>
+      </div>
+      <nav>
+        <div id="menu_container">
+          <ul class="sf-menu" id="nav">
+            <li><a href="/">主页</a></li>
+            <li><a href="/write">写文章</a></li>
+            <li><a href="/chat">聊天室</a></li>
+            <li><a href="#">Another</a></li>
+            <%if(typeof(user)==='undefined'){%>
+              <li><a href="/login">登录</a></li>
+            <%}else{%>
+              <li><a href="/logout">退出</a></li>
+            <%}%>
+            
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div id="site_content">   
+    <% include right%>
+    
+    

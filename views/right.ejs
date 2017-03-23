@@ -1,0 +1,25 @@
+      <div id="sidebar_container">
+        <%if(typeof(user) !=='undefined'){%>
+          <img class="paperclip" src="../images/paperclip.png" alt="paperclip" />
+          <div class="sidebar">
+            <h3>User Info</h3>
+              <P>欢迎:<%=user.username%></p>
+          </div>
+        <%}%>
+        <img class="paperclip" src="../images/paperclip.png" alt="paperclip" />
+        <div class="sidebar">
+          <h3>Latest News</h3>
+          <h4>公告</h4>
+          <h5>February 15st 2017</h5>
+          <p>whelcome my blog,本站建于2017年2月15日</p>
+        </div>
+        <img class="paperclip" src="../images/paperclip.png" alt="paperclip" />
+        <div class="sidebar">
+          <h3>More Useful Links</h3>
+          <ul>
+            <li><a href="#">First Link</a></li>
+            <li><a href="#">Another Link</a></li>
+            <li><a href="#">And Another</a></li>
+            <li><a href="#">Last One</a></li>
+          </ul>
+        </div>
